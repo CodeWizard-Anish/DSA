@@ -1,0 +1,40 @@
+/*
+Problem:
+Find common elements present in both arrays.
+
+Input:
+arr1 = {1, 2, 3, 4}
+arr2 = {3, 4, 5, 6}
+
+Output:
+3 4
+
+Concept:
+Hash Set
+
+Expected Complexity:
+Time: O(n + m)
+Space: O(n)
+*/
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+using namespace std;
+
+int main() {
+    vector<int> arr1 = {1, 2, 3, 4};
+    vector<int> arr2 = {3, 4, 5, 6};
+
+    unordered_set<int> st;
+
+    // TODO:
+    // Insert arr1 into set
+
+    cout << "Intersection:\n";
+
+    // Traverse arr2
+    // If element exists in set
+    // Print it
+
+    return 0;
+}
