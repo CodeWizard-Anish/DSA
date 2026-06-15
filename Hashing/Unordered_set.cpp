@@ -29,6 +29,15 @@ int main() {
     // find
     // count
     // traverse
+    st.insert(10);
+    st.insert(20);
+    st.insert(30);
+    st.erase(10);
+    st.find(20);
+    st.size();
+    for(auto it:st){
+        cout<<it;
+    }
 
     return 0;
 }

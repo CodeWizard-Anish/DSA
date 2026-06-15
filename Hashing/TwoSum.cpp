@@ -34,6 +34,13 @@ int main() {
     // Check if complement exists in map
     // If yes, print indices
     // Else store current element and index
-
+    unordered_map<int,int> sum;
+    for(int x:nums){
+        int complement = target - x;
+        if(sum.find(complement) != sum.end()){
+            cout<<sum[complement]<<" "<<x;
+        }
+        sum[x] = x;
+    }
     return 0;
 }

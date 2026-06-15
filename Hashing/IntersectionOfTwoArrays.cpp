@@ -29,12 +29,20 @@ int main() {
 
     // TODO:
     // Insert arr1 into set
+    for(int x:arr1){
+        st.insert(x);
+    }
 
     cout << "Intersection:\n";
 
     // Traverse arr2
     // If element exists in set
     // Print it
-
+    for(int x:arr2){
+        if(st.find(x) != st.end()){
+            cout << x << " ";
+        }
+    }
+    
     return 0;
 }

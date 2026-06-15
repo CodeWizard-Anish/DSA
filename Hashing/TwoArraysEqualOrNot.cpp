@@ -29,12 +29,24 @@ int main() {
     unordered_map<int, int> freq;
 
     // TODO: Add frequencies from arr1
+    for(int x:arr1){
+        freq[x]++;
+    }
 
     // TODO: Subtract frequencies using arr2
+    for(int x:arr2){
+        freq[x]--;
+    }
 
     bool equal = true;
 
     // TODO: Check if all frequencies are zero
+    for(auto x:freq){
+        if(x.second != 0){
+            equal = false;
+            break;
+        }
+    }
 
     if (equal)
         cout << "Arrays are Equal";

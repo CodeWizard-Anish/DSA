@@ -29,6 +29,14 @@ int main() {
     // Update values
     // Erase values
     // Traverse map
+    marks.insert({"Anish", 90});
+    marks.insert({"Rahul", 85});
+    marks["Anish"] = 95; // update
+    cout << marks["Anish"] << endl; // search   
+    marks.erase("Anish"); // erase
+    for(auto x:marks){
+        cout<<x.first<<" "<<x.second<<endl;
+    }
 
     return 0;
 }

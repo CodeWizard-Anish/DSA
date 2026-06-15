@@ -30,6 +30,9 @@ int main() {
 
     // TODO:
     // Insert all numbers into set
+    for(int x:nums){
+        st.insert(x);
+    }
 
     int longest = 0;
 
@@ -38,6 +41,19 @@ int main() {
     // Check if it's the start of a sequence
     // Expand sequence length
     // Update longest
+    for(int x:nums){
+        if(st.find(x-1) == st.end()){
+            int currentNum = x;
+            int currentStreak = 1;
+
+            while(st.find(currentNum + 1) != st.end()){
+                currentNum++;
+                currentStreak++;
+            }
+
+            longest = max(longest, currentStreak);
+        }
+    }
 
     cout << longest;
 

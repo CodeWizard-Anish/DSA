@@ -1,20 +1,20 @@
 /*
 Problem:
-Find the largest element in an array.
+Search for an element in an array.
 
 Example:
 Input:
-[2, 5, 1, 3, 0]
+[1,2,3,4,5]
+Target = 4
 
 Output:
-5
+Found
 
 Pattern Learned:
 Linear Scan
 
 Concepts:
-- Array Traversal
-- Maintaining an answer while traversing
+- Traversal
 
 Expected Complexity:
 Time: O(n)
@@ -22,20 +22,21 @@ Space: O(1)
 */
 #include <iostream>
 #include <vector>
-#include <climits>
 using namespace std;
 
 int main() {
 
-    vector<int> arr = {2, 5, 1, 3, 0};
+    vector<int> arr = {1,2,3,4,5};
 
-    int largest = INT_MIN;
+    int target = 4;
+
+    bool found = false;
 
     // TODO:
     // Traverse array
-    // Update largest
+    // Check target
 
-    cout << largest;
+    cout << found;
 
     return 0;
 }
