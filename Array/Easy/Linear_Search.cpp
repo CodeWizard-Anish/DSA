@@ -35,6 +35,12 @@ int main() {
     // TODO:
     // Traverse array
     // Check target
+    for(int i=0;i<arr.size();i++){
+        if(arr[i]==target){
+            found = true;
+            break;
+        }
+    }
 
     cout << found;
 

@@ -34,6 +34,20 @@ int main() {
 
     // TODO:
     // Update all three values
-
+    for(int i =0;i<arr.size();i++){
+        if(arr[i]>first){
+            third = second;
+            second = first;
+            first = arr[i];
+        }
+        else if(arr[i]<first && arr[i]>second){
+            third = second;
+            second = arr[i];
+        }
+        else if(arr[i]<second && arr[i]>third){
+            third = arr[i];
+        }
+    }
+    cout<<first<<" "<<second<<" " <<third;
     return 0;
 }

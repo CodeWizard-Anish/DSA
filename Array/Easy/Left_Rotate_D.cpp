@@ -35,6 +35,14 @@ int main() {
     // Reverse first part
     // Reverse second part
     // Reverse whole array
+    if(arr.empty()) return 0;
+    d = d % arr.size(); // Handle cases where d >= arr.size()
+    reverse(arr.begin(), arr.begin() + d);
+    reverse(arr.begin() + d, arr.end());
+    reverse(arr.begin(), arr.end());
+    for(int x : arr){
+        cout << x << " ";
+    }
 
     return 0;
 }

@@ -32,6 +32,9 @@ int main() {
 
     // TODO:
     // XOR all elements
+    for(int i=0;i<nums.size();i++){
+        xr = xr ^ nums[i];
+    }
 
     cout << xr;
 

@@ -32,6 +32,16 @@ int main() {
 
     // TODO:
     // Count streak
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]==1){
+            cnt++;
+        }
+        else{
+            maxi = max(maxi,cnt);
+            cnt = 0;
+        }
+    }
+    maxi = max(maxi,cnt); // Update maxi one final time in case the array ends with a streak of 1s
 
     cout << maxi;
 

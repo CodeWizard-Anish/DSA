@@ -34,6 +34,11 @@ int main() {
     // TODO:
     // Traverse array
     // Update largest
+    for(int i  =0;i<arr.size();i++){
+        if(arr[i]>largest){
+            largest = arr[i];
+        }
+    }
 
     cout << largest;
 

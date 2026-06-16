@@ -32,6 +32,16 @@ int main() {
 
     // TODO:
     // Use j as fast pointer
+    for(int j=1;j<arr.size();j++){
+        if(arr[i]!=arr[j]){
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    cout << "Unique elements: ";
+    for(int k=0;k<=i;k++){
+        cout << arr[k] << " ";
+    }
 
     return 0;
 }

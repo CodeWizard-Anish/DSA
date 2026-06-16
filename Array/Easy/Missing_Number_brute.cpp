@@ -32,6 +32,19 @@ int main() {
 
     // TODO:
     // Check every number from 1 to n
+    for(int i=1;i<=n;i++){
+        bool found = false;
+        for(int j=0;j<arr.size();j++){
+            if(arr[j]==i){
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            cout << "Missing number: " << i;
+            break;
+        }
+    }
 
     return 0;
 }

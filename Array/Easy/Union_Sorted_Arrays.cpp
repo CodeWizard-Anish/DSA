@@ -36,6 +36,28 @@ int main() {
 
     // TODO:
     // Merge arrays
+    while(i < arr1.size() && j < arr2.size()){//Merge technique using pointer
+        if(arr1[i] < arr2[j]){
+            ans.push_back(arr1[i]);
+            i++;
+        }
+        else if(arr1[i] > arr2[j]){
+            ans.push_back(arr2[j]);
+            j++;
+        }
+        else{
+            ans.push_back(arr1[i]);
+            i++;
+            j++;
+        }
+    }
+    for(int k = i; k < arr1.size(); k++){
+       ans.push_back(arr1[k]);
+    }
+    cout << "Union of two sorted arrays: ";
+    for(int x : ans){
+        cout << x << " ";
+    }
 
     return 0;
 }

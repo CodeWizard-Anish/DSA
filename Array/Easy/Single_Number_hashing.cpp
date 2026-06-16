@@ -12,6 +12,14 @@ int main() {
     // TODO:
     // Count frequencies
     // Find frequency = 1
+    for(int x:nums){
+        freq[x]++;
+    }
+    for(auto it:freq){
+        if(it.second==1){
+            cout<<it.first<<" ";
+        }
+    }
 
     return 0;
 }
