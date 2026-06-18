@@ -40,6 +40,25 @@ int main(){
     // TODO:
     // Store starting index when new subarray begins
     // Update answer range
+    for(int i=0; i<arr.size(); i++){
+        sum += arr[i];
 
+        if(sum > maxi){
+            maxi = sum;
+            ansStart = start;
+            ansEnd = i;
+        }
+
+        if(sum < 0){
+            sum = 0;
+            start = i + 1;
+        }
+    }
+
+    // Print the subarray with maximum sum
+    for(int i=ansStart; i<=ansEnd; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
     return 0;
 }

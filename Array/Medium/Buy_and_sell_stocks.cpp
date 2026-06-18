@@ -38,6 +38,11 @@ int main(){
     // TODO:
     // Update minimum
     // Calculate profit
+    for(int i = 1; i<prices.size(); i++){
+        mini = min(mini, prices[i]);
+        profit = max(profit, prices[i] - mini);
+    }
+    
 
     cout << profit;
 
