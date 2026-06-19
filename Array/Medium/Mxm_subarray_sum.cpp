@@ -40,10 +40,10 @@ int main(){
     // Add current element to sum
     // Update maximum
     // If sum becomes negative reset it
-    for(int i=0; i<arr.size(); i++){
-        sum += arr[i];
+    for(int i=0; i<arr.size(); i++){ //normal sum approach...
+        sum += arr[i];//what's new is to check maximum at every point like which is giving maximum
         maxi = max(maxi, sum);
-        if(sum < 0){
+        if(sum < 0){//One more thing is that if sum becomes negative start from zero
             sum = 0;
         }
     }

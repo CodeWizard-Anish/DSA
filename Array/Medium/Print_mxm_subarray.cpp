@@ -32,9 +32,9 @@ int main(){
     int sum = 0;
     int maxi = INT_MIN;
 
-    int start = 0;
-    int ansStart = 0;
-    int ansEnd = 0;
+    int start = 0;//checker like it's work to check whether sum is +ve or -ve ..if -ve shift start
+    int ansStart = 0;//starting index of answer subarray
+    int ansEnd = 0;//last index of answer subarray
 
 
     // TODO:
@@ -43,15 +43,15 @@ int main(){
     for(int i=0; i<arr.size(); i++){
         sum += arr[i];
 
-        if(sum > maxi){
-            maxi = sum;
-            ansStart = start;
-            ansEnd = i;
+        if(sum > maxi){//checking sum greater than maxi
+            maxi = sum;//updating maximum sum
+            ansStart = start; //starting index updated to start of new subarray
+            ansEnd = i;//last index
         }
 
         if(sum < 0){
             sum = 0;
-            start = i + 1;
+            start = i + 1;//shifting start to next index as sum is negative so new subarray will start from next index
         }
     }
 

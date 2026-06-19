@@ -32,17 +32,17 @@ int main(){
 
     vector<int> prices = {7,1,5,3,6,4};
 
-    int mini = prices[0];
+    int mini = prices[0];//starting with first element as minimum value
     int profit = 0;
 
     // TODO:
     // Update minimum
     // Calculate profit
     for(int i = 1; i<prices.size(); i++){
-        mini = min(mini, prices[i]);
-        profit = max(profit, prices[i] - mini);
+        mini = min(mini, prices[i]);//checking minimum value at every point
+        profit = max(profit, prices[i] - mini);//updating profit at every point by checking difference between current value and minimum value so far
     }
-    
+
 
     cout << profit;
 
