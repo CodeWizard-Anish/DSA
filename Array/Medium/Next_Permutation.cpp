@@ -37,6 +37,27 @@ int main(){
     // Find next greater element
     // Swap
     // Reverse remaining part
+    for(int i = nums.size() - 2; i >= 0; i--){
+        if(nums[i] < nums[i + 1]){
+            for(int j = nums.size() - 1; j > i; j--){
+                if(nums[j] > nums[i]){
+                    swap(nums[i], nums[j]);
+                    reverse(nums.begin() + i + 1, nums.end());
+                    cout << "Next permutation: ";
+                    for(int k = 0; k < nums.size(); k++){
+                        cout << nums[k] << " ";
+                    }
+                    return 0;
+                }
+            }
+        }
+    }
 
+    // If no breakpoint found, it's the last permutation
+    reverse(nums.begin(), nums.end());
+    cout << "Next permutation: ";
+    for(int k = 0; k < nums.size(); k++){
+        cout << nums[k] << " ";
+    }
     return 0;
 }

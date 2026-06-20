@@ -35,6 +35,16 @@ int main(){
     // TODO:
     // Traverse from right
     // Compare with maximum
+    if(arr.size() == 0){
+        cout << "No leaders in the array";
+        return 0;
+    }
+    for(int i = arr.size() - 1; i >= 0; i--){
+        if(arr[i] > maxi){
+            cout << arr[i] << " ";
+            maxi = arr[i];
+        }
+    }
 
     return 0;
 }

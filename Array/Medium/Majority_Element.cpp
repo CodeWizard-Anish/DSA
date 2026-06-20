@@ -35,6 +35,18 @@ int main(){
 
     // TODO:
     // Implement voting algorithm
+    for(int i = 0; i < nums.size(); i++){
+        if(count == 0){
+            element = nums[i];
+            count = 1;
+        } else if(nums[i] == element){
+            count++;
+        } else {
+            count--;
+        }
+    }
+
+    cout << "Majority element: " << element << endl;
 
     return 0;
 }
