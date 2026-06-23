@@ -36,6 +36,21 @@ int main() {
 
     // TODO:
     // Generate rows
+    for(int i = 0; i < n; i++) {
+        vector<int> row(i + 1, 1); // Initialize row with 1s
+        for (int j = 1; j < i; j++) {
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]; // Fill in the values based on the previous row
+        }
+        triangle.push_back(row);
+    }
+
+    // Print the triangle
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j <= i; j++) {
+            cout << triangle[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
