@@ -40,6 +40,22 @@ int main() {
     // TODO:
     // Transpose matrix
     // Reverse every row
+    for(int i = 0; i < matrix.size(); i++) {
+        for (int j = i + 1; j < matrix[0].size(); j++) {// starts with j = i + 1 to avoid swapping back
+            //We only want to touch the cells above the diagonal:
+            swap(matrix[i][j], matrix[j][i]);
+        }
+    }
+    for(int i = 0; i < matrix.size(); i++) {
+        reverse(matrix[i].begin(), matrix[i].end());
+    }
+    // Print the rotated matrix
+    for(int i = 0; i < matrix.size(); i++) {
+        for (int j = 0; j < matrix[0].size(); j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
