@@ -34,7 +34,22 @@ int main(){
 
     // TODO:
     // Binary Search Logic Here
-
+    int left = 0;
+    int right = nums.size()-1;
+    int mid = left + (right - left)/2;
+    while(left <= right){
+       if(nums[mid]== target){
+            cout<<mid;
+            return 0;
+       }
+        else if(target <nums[mid] ){
+            right = mid-1;
+        }else{
+            left = mid +1;
+        } 
+        mid = left + (right - left)/2;
+    }
+    cout<<-1;
 
 
     return 0;

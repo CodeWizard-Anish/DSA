@@ -35,8 +35,29 @@ int main(){
 
     // TODO:
     // Floor and Ceil Logic
+    int left = 0;
+    int right = nums.size() - 1;
+    int mid = left + (right - left) / 2;
+    int floor = -1;
+    int ceil = -1;
 
+    while (left <= right) {
+        if (nums[mid] < target) {
+            floor = mid;
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            ceil = mid;
+            right = mid - 1;
+        } else {
+            floor = mid;
+            ceil = mid;
+            break;
+        }
+        mid = left + (right - left) / 2;
+    }
 
+    cout << "Floor: " << floor << endl;
+    cout << "Ceil: " << ceil << endl;
 
     return 0;
 }
