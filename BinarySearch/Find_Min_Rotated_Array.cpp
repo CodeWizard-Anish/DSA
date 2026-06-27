@@ -31,8 +31,19 @@ int main(){
 
     // TODO:
     // Find Minimum Logic
+    int start = 0;
+    int end = nums.size() - 1;
 
+    while(start<end){
+        int mid = start +(end  - start )/2;
+        if (nums[mid] > nums[end]){
+            start = mid + 1; // move right
+        } else {
+            end = mid; // move left
+        }
+    }
 
+    cout << nums[start] << endl;
 
     return 0;
 }
