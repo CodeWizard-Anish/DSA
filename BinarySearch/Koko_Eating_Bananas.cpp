@@ -33,6 +33,25 @@ int main(){
 
     // TODO:
     // Koko Logic
+    int start = 1;
+    int end = 0;
+
+    for(int i=0; i<piles.size(); i++){
+        end = max(end, piles[i]);
+    }
+    while(start < end){
+        int mid = start + (end - start)/2;
+        int hours = 0;
+        for(int i=0; i<piles.size(); i++){
+            hours += (piles[i] + mid - 1)/mid; // ceil(piles[i]/mid)
+        }
+        if(hours <= h){
+            end = mid;
+        } else {
+            start = mid + 1;
+        }
+    }
+    cout << start << endl;
 
 
 
