@@ -25,6 +25,7 @@ Space: O(1)
 
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 int main(){
@@ -34,8 +35,22 @@ int main(){
 
     // TODO:
     // Anagram logic
-
-
-
+    if(s.size() != t.size()){
+        cout << "false" << endl;
+        return 0;
+    }
+    vector<int> count(26, 0);
+    for(int i = 0; i < s.size(); i++){  
+        
+        count[s[i] - 'a']++;
+        count[t[i] - 'a']--;
+    }
+    for(int i = 0; i < 26; i++){
+        if(count[i] != 0){
+            cout << "false" << endl;
+            return 0;
+        }
+    }
+    cout << "true" << endl;
     return 0;
 }
