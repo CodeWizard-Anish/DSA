@@ -32,8 +32,23 @@ int main(){
 
     // TODO:
     // Remove outer parentheses logic
+    int balance = 0;
+    string result = "";
 
-
+    for (char c : s) {
+        if (c == '(') {
+            if (balance > 0) {
+                result += c; // Add '(' only if it's not an outer parenthesis
+            }
+            balance++;
+        } else { // c == ')'
+            balance--;
+            if (balance > 0) {
+                result += c; // Add ')' only if it's not an outer parenthesis
+            }
+        }
+    }
+    cout << result << endl;
 
     return 0;
 }
