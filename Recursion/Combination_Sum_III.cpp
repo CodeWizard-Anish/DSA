@@ -1,37 +1,34 @@
 /*
 Problem:
-Generate unique subsets.
+Choose k numbers from 1-9 whose sum is n.
 
 Example:
 
 Input:
-[1,2,2]
+k = 3
+n = 7
 
 Output:
-[]
-[1]
-[2]
-[1,2]
-[2,2]
-[1,2,2]
+[1,2,4]
 
 Pattern Learned:
 Backtracking
 
 Concepts:
-- Skip duplicates
+- Fixed size subset
+- Target sum
 
 Expected Complexity:
-O(2^n)
+Exponential
 */
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
-void solve(int index,
-           vector<int>& nums,
+void solve(int start,
+           int k,
+           int target,
            vector<int>& current){
 
     // TODO:
@@ -40,13 +37,12 @@ void solve(int index,
 
 int main(){
 
-    vector<int> nums = {1,2,2};
-
-    sort(nums.begin(), nums.end());
+    int k = 3;
+    int target = 7;
 
     vector<int> current;
 
-    solve(0, nums, current);
+    solve(1,k,target,current);
 
     return 0;
 }
