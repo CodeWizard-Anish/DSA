@@ -48,6 +48,7 @@ int main(){
         cout<<nums[i]<<" "; // Print the reversed array
     }
     cout<<endl;
+    
 
     return 0;
 }
