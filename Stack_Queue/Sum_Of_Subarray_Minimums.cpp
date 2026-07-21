@@ -1,22 +1,22 @@
 /*
 Problem:
-Find the next greater element in a circular array.
+Find the sum of minimum elements of all subarrays.
 
 Example:
 
 Input:
-[1,2,1]
+[3,1,2,4]
 
 Output:
-2 -1 2
+17
 
 Pattern Learned:
 Monotonic Stack
 
 Concepts:
-- Circular Array
-- Stack
-- Modulo
+- Previous Smaller
+- Next Smaller
+- Contribution Technique
 
 Expected Complexity:
 Time: O(n)
@@ -31,13 +31,10 @@ using namespace std;
 
 int main(){
 
-    vector<int> nums = {1,2,1};
+    vector<int> nums = {3,1,2,4};
 
     // TODO:
-    // Traverse twice
-
-    // TODO:
-    // Maintain decreasing stack
+    // Compute contribution of every element
 
     return 0;
 }
